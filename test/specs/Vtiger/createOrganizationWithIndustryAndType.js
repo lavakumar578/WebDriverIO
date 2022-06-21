@@ -27,11 +27,11 @@ describe('Vtiger',async ()=>{
         //click on organization
         const organization= $('//td/a[text()="Organizations"]')
         await organization.click()
-
+        await expect(browser).toHaveTitleContaining('Organizations')
         //click on create organization icon
         const clickOnCreateOrganization= $('//td/a/img[@alt="Create Organization..."]')
         await  clickOnCreateOrganization.click()
-
+        await expect(browser).toHaveUrlContaining('EditView&return_action')
         //entering the value 
         const entervalue= $('//td[@class="dvtCellInfo"]//input[@name="accountname"]')
         var randomNum=Math.round(Math.random()*1000)
@@ -52,11 +52,10 @@ describe('Vtiger',async ()=>{
 
         async () => {
             const elem = await $('//span[contains(text(),"Organization Information")]')
-            await elem.waitForDisplayed({ timeout: 3000 });
+            await elem.waitForDisplay({ timeout: 5000 });
         }
 
-        //getting the title of the page ==>  Organizations
-        await expect(browser).toHaveTitleContaining('Organizations')
+        await expect(browser).toHaveUrlContaining('DetailView')
         
         var getOrganizationName=await $('//span[@id="dtlview_Organization Name"]').getText()
 

@@ -32,8 +32,7 @@ describe('Vtiger',async ()=>{
         //create Document
         const createDocument=await $('//img[@alt="Create Document..."]')
         await createDocument.click()
-        //getting the title of the page ==>  Documents
-        await expect(browser).toHaveTitleContaining('Documents')
+        await expect(browser).toHaveUrlContaining('EditView&return_action')
 
         //title 
         const title=await $('//td[@class="dvtCellLabel"]/following-sibling::td[@class="dvtCellInfo"]/input[@name="notes_title"]')
@@ -42,6 +41,10 @@ describe('Vtiger',async ()=>{
 
         //switchtoframe
         await browser.switchToFrame(0)
+        async () => {
+            const elem = await browser.switchToFrame(0)
+            await elem.waitForDisplayed({ timeout: 5000 })}
+
        
         async () => {
             const elem = await $('//body[@class="cke_show_borders"]')
@@ -81,8 +84,7 @@ describe('Vtiger',async ()=>{
         //savebutton
         const save=await $('//input[@name="filename"]/../../../following-sibling::tr//following-sibling::tr//td//input[@title="Save [Alt+S]"]')
         await save.click()
-        //getting the title of the page ==>  Documents
-        await expect(browser).toHaveTitleContaining('Documents')
+        await expect(browser).toHaveUrlContaining('DetailView&module')
 
         //go to admin
         const admin=$('//td[@style="padding-left:10px;padding-top:3px;"]/following-sibling::td[contains(@onmouseover,"fnDropDownUser(this,")]/img')
@@ -93,9 +95,6 @@ describe('Vtiger',async ()=>{
         await signout.click()
 
         //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
-        await expect(browser).toHaveTitleContaining('vtiger CRM 5')
-
-
-
+        await expect(browser).toHaveTitleContaining('vtiger CRM 5');
     })
 })

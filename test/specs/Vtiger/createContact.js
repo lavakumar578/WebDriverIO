@@ -34,8 +34,8 @@ describe('Vtiger',async ()=>{
         const clickOnCreateContact= $('//td/a/img[@alt="Create Contact..."]')
         await  clickOnCreateContact.click()
 
-        //getting the title of the page ==>  Contacts
-        await expect(browser).toHaveTitleContaining('Contacts')
+       
+        await expect(browser).toHaveUrlContaining('EditView&return_action')
 
         //entering the value 
         const entervalue= $('//td/input[@name="lastname"]')
@@ -45,8 +45,8 @@ describe('Vtiger',async ()=>{
         const savebutton= $('//input[@name="lastname"]/../../preceding-sibling::tr/td/div/input[@title="Save [Alt+S]"]')
         await savebutton.click()
 
-        //getting the title of the page ==>  Contacts
-        await expect(browser).toHaveTitleContaining('Contacts')
+      
+        await expect(browser).toHaveUrlContaining('DetailView&module')
         
         //go to admin
         const admin=$('//td[@style="padding-left:10px;padding-top:3px;"]/following-sibling::td[contains(@onmouseover,"fnDropDownUser(this,")]/img')

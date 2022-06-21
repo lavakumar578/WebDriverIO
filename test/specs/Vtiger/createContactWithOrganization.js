@@ -36,8 +36,7 @@ describe('Vtiger',async ()=>{
     const clickOnCreateOrganization=await $('//td/a/img[@alt="Create Organization..."]')
     await  clickOnCreateOrganization.click()
 
-    //getting the title of the page ==>  Organizations
-    await expect(browser).toHaveTitleContaining('Organizations')
+    await expect(browser).toHaveUrlContaining('EditView&return_action')
 
     //entering the value 
     var entervalue=await $('//td[@class="dvtCellInfo"]//input[@name="accountname"]')
@@ -50,11 +49,11 @@ describe('Vtiger',async ()=>{
     
     async () => {
       const elem = await $('//span[contains(text(),"Organization Information")]')
-      await elem.waitForDisplayed({ timeout: 3000 });
+      await elem.waitForDisplay({ timeout: 5000 });
   }
 
-    //getting the title of the page ==>  Organizations
-    await expect(browser).toHaveTitleContaining('Organizations')
+    
+    await expect(browser).toHaveUrlContaining('DetailView')
 
     getorganizationName=await $('//span[@id="dtlview_Organization Name"]').getText()
     
@@ -73,8 +72,7 @@ describe('Vtiger',async ()=>{
     const clickOnCreateContact=await $('//td/a/img[@alt="Create Contact..."]')
     await  clickOnCreateContact.click()
 
-    //getting the title of the page ==>  Contacts
-    await expect(browser).toHaveTitleContaining('Contacts')
+    await expect(browser).toHaveUrlContaining('EditView&return_action')
 
     //entering the value 
     var entervalue= await $('//td/input[@name="lastname"]')
@@ -105,8 +103,8 @@ describe('Vtiger',async ()=>{
     //save the contact
     var savebutton= await $('//input[@name="lastname"]/../../preceding-sibling::tr/td/div/input[@title="Save [Alt+S]"]')
     await savebutton.click()
-    //getting the title of the page ==>  Contacts
-    await expect(browser).toHaveTitleContaining('Contacts')
+
+    await expect(browser).toHaveUrlContaining('DetailView&module')
 
     //go to admin
     const admin=await $('//td[@style="padding-left:10px;padding-top:3px;"]/following-sibling::td[contains(@onmouseover,"fnDropDownUser(this,")]/img')

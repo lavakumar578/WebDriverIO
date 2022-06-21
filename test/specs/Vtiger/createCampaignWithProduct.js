@@ -30,7 +30,7 @@ describe('Vtiger',async()=>{
      await expect(browser).toHaveTitleContaining('Products')
     const clickCreateProduct=await $('//img[@alt="Create Product..."]')
     await clickCreateProduct.click()
-
+    await expect(browser).toHaveUrlContaining('EditView&return_action')
     var randomNum=Math.round(Math.random()*1000)
     var productName=await $('//input[@name="productname"]')
     await productName.setValue('laptop'+randomNum)
@@ -40,6 +40,7 @@ describe('Vtiger',async()=>{
     await scroll.scrollIntoView()
     var save=await $('//td/textarea/../../following-sibling::tr/following-sibling::tr//input[@title="Save [Alt+S]"]')
     await save.click()
+    await expect(browser).toHaveUrlContaining('DetailView&module')
     var getproductName=await $('//span[@id="dtlview_Product Name"]').getText()
   
      //click on more
@@ -58,8 +59,7 @@ describe('Vtiger',async()=>{
      await  clickOnCreateCampaign.click()
 
      
-    //getting the title of the page ==>  Campaigns
-    await expect(browser).toHaveTitleContaining('Campaigns')
+     await expect(browser).toHaveUrlContaining('EditView&return_action')
 
     var enterCampaign=await $('//input[@name="campaignname"]')
     await enterCampaign.setValue('SDET'+randomNum)
@@ -79,8 +79,8 @@ describe('Vtiger',async()=>{
     var save=await $('//td/input[@name="campaignname"]/../../following-sibling::tr/following-sibling::tr//input[@title="Save [Alt+S]"]')
     await save.click()
     
-    //getting the title of the page ==>  Campaigns
-    await expect(browser).toHaveTitleContaining('Campaigns')
+    
+    await expect(browser).toHaveUrlContaining('DetailView&module')
      //go to admin
      const admin=$('//td[@style="padding-left:10px;padding-top:3px;"]/following-sibling::td[contains(@onmouseover,"fnDropDownUser(this,")]/img')
      await admin. moveTo()

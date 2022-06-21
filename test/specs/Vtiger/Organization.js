@@ -33,8 +33,7 @@ describe('Vtiger',async ()=>{
         //click on create organization icon
         const clickOnCreateOrganization= $('//td/a/img[@alt="Create Organization..."]')
         await  clickOnCreateOrganization.click()
-        //getting the title of the page ==>  Organizations
-        await expect(browser).toHaveTitleContaining('Organizations')
+        await expect(browser).toHaveUrlContaining('EditView&return_action')
         //entering the value 
         const entervalue= $('//td[@class="dvtCellInfo"]//input[@name="accountname"]')
         var randomNum=Math.round(Math.random()*1000)
@@ -52,8 +51,7 @@ describe('Vtiger',async ()=>{
 
         var getOrganizationName=await $('//span[@id="dtlview_Organization Name"]').getText()
 
-        //getting the title of the page ==>  Organizations
-        await expect(browser).toHaveTitleContaining('Organizations')
+        await expect(browser).toHaveUrlContaining('DetailView&module')
 
         //go to admin
         const admin=$('//td[@style="padding-left:10px;padding-top:3px;"]/following-sibling::td[contains(@onmouseover,"fnDropDownUser(this,")]/img')

@@ -22,18 +22,23 @@ exports.config = {
     //
     //npx wdio run ./wdio.conf.js
     specs: [
-        // './test/specs/**/*.js',
-        'test/specs/Vtiger/createCampaignTest.js',
-        'test/specs/Vtiger/createContact.js',
-        'test/specs/Vtiger/createOrganization.js',
-        'test/specs/Vtiger/createContactWithOrganization.js',
-        'test/specs/Vtiger/createOrganizationWithIndustryAndType.js',
-        'test/specs/Vtiger/createDocument.js',
-        'test/specs/Vtiger/createProduct.js',
-        'test/specs/Vtiger/LoginTest.js',
-        'test/specs/Vtiger/createCampaignWithProduct.js',
-        'test/specs/firstTest.js'
+        './test/specs/**/*.js',
+        // 'test/specs/Vtiger/createCampaignTest.js',
+        // 'test/specs/Vtiger/createContact.js',
+        // 'test/specs/Vtiger/createContactWithOrganization.js',
+        // 'test/specs/Vtiger/createOrganizationWithIndustryAndType.js',
+        // 'test/specs/Vtiger/createDocument.js',
+        // 'test/specs/Vtiger/createProduct.js',
+        // 'test/specs/Vtiger/createCampaignWithProduct.js',
+        // 'test/specs/firstTest.js',
+        // 'test/specs/Vtiger/Organization.js'
     ],
+    suites: {
+        //npx wdio wdio.conf.js --suite smokeSuite 
+        //npx wdio wdio.conf.js --suite regressionSuite
+        smokeSuite:['test/specs/Vtiger/createDocument.js','test/specs/Vtiger/createContact.js','test/specs/Vtiger/createProduct.js'],
+        regressionSuite:['test/specs/Vtiger/createContactWithOrganization.js','test/specs/Vtiger/createOrganizationWithIndustryAndType.js']
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -55,7 +60,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 5,
+    maxInstances: 3,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -66,15 +71,24 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
+        // browserName: 'firefox',
         browserName: 'chrome',
+        // browserName: 'MicrosoftEdge',
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+    },
+    // {
+    //     maxInstances: 1,
+    //     // browserName: 'firefox',
+    //        browserName: 'MicrosoftEdge',
+    //     acceptInsecureCerts: true
+    // }
+],
     //
     // ===================
     // Test Configurations
@@ -109,11 +123,11 @@ exports.config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 100000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 1200000,
     //
     // Default request retries count
     connectionRetryCount: 3,
@@ -122,7 +136,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['selenium-standalone'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

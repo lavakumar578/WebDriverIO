@@ -19,7 +19,7 @@ describe('Vtiger',async ()=>{
         //click on login button
         const loginbutton= $('//div/input[@id="submitButton"]')
         await loginbutton.click()
-
+     await browser.pause(2000)
         //getting the title of the page ==>  Home page
         await expect(browser).toHaveTitleContaining('Home')
  
@@ -39,8 +39,7 @@ describe('Vtiger',async ()=>{
         await  clickOnCreateCampaign.click()
 
         
-          //getting the title of the page ==>  Campaigns
-        await expect(browser).toHaveTitleContaining('Campaigns')
+        await expect(browser).toHaveUrlContaining('EditView&return_action')
 
         //entering the value 
         const entervalue= $('//td/input[@name="campaignname"]')
@@ -53,8 +52,8 @@ describe('Vtiger',async ()=>{
         await savebutton.click()
 
               
-          //getting the title of the page ==>  Campaigns
-        await expect(browser).toHaveTitleContaining('Campaigns')
+        
+        await expect(browser).toHaveUrlContaining('DetailView&module')
 
         //go to admin
         const admin=$('//td[@style="padding-left:10px;padding-top:3px;"]/following-sibling::td[contains(@onmouseover,"fnDropDownUser(this,")]/img')
