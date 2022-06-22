@@ -22,6 +22,7 @@ describe('Vtiger',async ()=>{
 
     //getting the title of the page ==>  Home page
     await expect(browser).toHaveTitleContaining('Home')
+    
 
      
 

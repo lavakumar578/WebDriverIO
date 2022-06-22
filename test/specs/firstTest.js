@@ -7,8 +7,7 @@ describe('Vtiger',async ()=>{
       await expect(browser).toHaveTitleContaining('vtiger CRM 5')
     //maximize the browser  
         await browser.maximizeWindow()
-    })
-    it('login page credentials',async()=>{
+  
         //username=admin
         const username=await $('//div/input[@name="user_name"]')
         username.setValue('admin')
@@ -23,7 +22,7 @@ describe('Vtiger',async ()=>{
       
         const errormsg=await $('//div[@class="errorMessage"]')
 
-        await browser.waitUntil(async ()=>(await (await $('.errorMessage')).getAttribute('class')==='You must specify a valid username and password.',
+        await browser.waitUntil(async ()=>((await $('.errorMessage')).getAttribute('class')==='You must specify a valid username and password.',
         {
             timeout: 10000,
             timeoutMsg: 'expected text to be different after 5s'

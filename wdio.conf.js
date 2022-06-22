@@ -1,3 +1,5 @@
+const video = require('wdio-video-reporter');
+
 exports.config = {
     //
     // ====================
@@ -27,8 +29,8 @@ exports.config = {
         // 'test/specs/Assignments/VtigerContactCheckBox.js',
         // 'test/specs/Assignments/scrollHelp.js',
         // 'test/specs/Assignments/frames.js',
-        'test/specs/Assignments/framehandling.js',
-        // 'test/specs/Vtiger/createCampaignTest.js',
+        // 'test/specs/Assignments/framehandling.js',
+        'test/specs/Vtiger/createCampaignTest.js',
         // 'test/specs/Vtiger/createContact.js',
         // 'test/specs/Vtiger/createContactWithOrganization.js',
         // 'test/specs/Vtiger/createOrganizationWithIndustryAndType.js',
@@ -164,7 +166,18 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    // reporters: ['spec'],
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
+    reporters: [
+        [video, {
+          saveAllVideos: false,       // If true, also saves videos for successful test cases
+          videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        }],
+      ],
 
 
     
@@ -269,14 +282,17 @@ exports.config = {
      * @param {Boolean} result.passed    true if test has passed, otherwise false
      * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+            await browser.takeScreenshot();
+          }
+    },
 
 
-    /**
-     * Hook that gets executed after the suite has ended
-     * @param {Object} suite suite details
-     */
+    
+    //   Hook that gets executed after the suite has ended
+    //   @param {Object} suite suite details
+     
     // afterSuite: function (suite) {
     // },
     /**

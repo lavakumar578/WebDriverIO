@@ -1,0 +1,57 @@
+{
+  "uid" : "594f4ca77fd98724",
+  "name" : "frames handling",
+  "fullName" : "frames.frames handling",
+  "historyId" : "9da45817c62352943b3c74c698af1b0a",
+  "time" : {
+    "start" : 1655889067722,
+    "stop" : 1655889074831,
+    "duration" : 7109
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "frames"
+  }, {
+    "name" : "testClass",
+    "value" : "frames"
+  }, {
+    "name" : "testMethod",
+    "value" : "frames handling"
+  }, {
+    "name" : "package",
+    "value" : "frames"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-103.0.5060.53"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "594f4ca77fd98724.json",
+  "parameterValues" : [ "chrome-103.0.5060.53" ]
+}

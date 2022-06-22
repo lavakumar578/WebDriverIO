@@ -11,7 +11,9 @@ describe('frames',async()=>{
         var getmsg=await $("//input")
         await msg.setValue('hello morning')
         var result=await getmsg.getValue()
-        await assert.equal(result, 'hello morning', 'msg is not equal');
+        // await assert.equal(result, 'hello morning', 'msg is not equal');
+        await assert.equal(result, 'hel', 'msg is not equal');
+        
         
         
     
@@ -28,7 +30,7 @@ describe('frames',async()=>{
         await browser.switchToFrame(frame2)
         var selectAnimal=await $('//body/b[text()="Animals :"]/../select[@id="animals"]')
         await selectAnimal.selectByVisibleText('Avatar')
-        await browser.pause(2000)
+        
         
         console.log(result);
 

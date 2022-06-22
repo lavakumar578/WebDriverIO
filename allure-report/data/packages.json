@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "frames",
+    "children" : [ {
+      "name" : "frames handling",
+      "uid" : "594f4ca77fd98724",
+      "parentUid" : "9505963bcbfbb391596ef771503d9091",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655889067722,
+        "stop" : 1655889074831,
+        "duration" : 7109
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome-103.0.5060.53" ]
+    } ],
+    "uid" : "9505963bcbfbb391596ef771503d9091"
+  }, {
+    "name" : "Vtiger",
+    "children" : [ {
+      "name" : "launching vtiger application",
+      "uid" : "b972f4f832a93c7c",
+      "parentUid" : "f9c9dacfe357924457ddb2f32292d77f",
+      "status" : "failed",
+      "time" : {
+        "start" : 1655892692955,
+        "stop" : 1655892798427,
+        "duration" : 105472
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome-103.0.5060.53" ]
+    }, {
+      "name" : "login page credentials",
+      "uid" : "99fbebad92d809bb",
+      "parentUid" : "f9c9dacfe357924457ddb2f32292d77f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655892798428,
+        "stop" : 1655892804164,
+        "duration" : 5736
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome-103.0.5060.53" ]
+    }, {
+      "name" : "createCampaign",
+      "uid" : "a64f3f62c042b6de",
+      "parentUid" : "f9c9dacfe357924457ddb2f32292d77f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655893022939,
+        "stop" : 1655893079052,
+        "duration" : 56113
+      },
+      "flaky" : true,
+      "parameters" : [ "chrome-103.0.5060.53" ]
+    } ],
+    "uid" : "f9c9dacfe357924457ddb2f32292d77f"
+  } ]
+}

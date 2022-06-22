@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Expect window to have title containing\n                \n                Expected: \"lava\"\n                Received: \"vtiger CRM 5 - Commercial Open Source CRM\"",
+      "children" : [ {
+        "name" : "launching vtiger application",
+        "uid" : "b972f4f832a93c7c",
+        "parentUid" : "92b6d51774456bf4c82afaa451fcd76b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655892692955,
+          "stop" : 1655892798427,
+          "duration" : 105472
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome-103.0.5060.53" ]
+      } ],
+      "uid" : "92b6d51774456bf4c82afaa451fcd76b"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

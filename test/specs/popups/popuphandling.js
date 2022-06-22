@@ -16,9 +16,3 @@ describe('alerHandling',async()=>{
 
     })
 })
-
-// browser.getAlertText()
-// browser.acceptAlert()
-// browser.getAlertText()
-// browser.sendAlertText()
-//D:\TEST YANTRA\Js script\WebDriver IO\test\specs\popups\popupgeneration.html
