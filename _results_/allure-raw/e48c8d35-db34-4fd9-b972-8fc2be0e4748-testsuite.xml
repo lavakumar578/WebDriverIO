@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1655959977122' stop='1655960101795'>
+    <name>Automation</name>
+    <title>Automation</title>
+    <test-cases>
+        <test-case start='1655959978012' status='broken' stop='1655960101345'>
+            <name>practiceAutomation</name>
+            <title>practiceAutomation</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='f922b524-3bdf-44a6-ade4-31e56c9b417d-attachment.png' type='image/png' size='516280'/>
+                <attachment title='Screenshot' source='e658ecde-9ef2-4eb0-9f95-90d7b37613f4-attachment.png' type='image/png' size='614193'/>
+                <attachment title='Screenshot' source='ffe5efcf-1a4a-4e50-9789-df1a6691c3fc-attachment.png' type='image/png' size='197936'/>
+                <attachment title='Screenshot' source='48c70431-5f78-446a-8677-2c5c0117522c-attachment.png' type='image/png' size='228720'/>
+                <attachment title='Screenshot' source='5757a5a2-3ea8-495b-90cf-ce2515f8270e-attachment.png' type='image/png' size='232103'/>
+                <attachment title='Screenshot' source='5a8d1df7-e4e8-4601-b32e-958a785078fb-attachment.png' type='image/png' size='232185'/>
+                <attachment title='Screenshot' source='1f8d10d9-4a35-4ef8-b417-019b189a3353-attachment.png' type='image/png' size='232154'/>
+                <attachment title='Screenshot' source='e46543aa-a51a-4d9a-b0ca-a9542277a421-attachment.png' type='image/png' size='232681'/>
+                <attachment title='Screenshot' source='d1df1d5f-419e-4dad-a001-2983804d2206-attachment.png' type='image/png' size='234122'/>
+                <attachment title='Screenshot' source='afb93f19-7668-4929-a6c9-eae36449201a-attachment.png' type='image/png' size='234451'/>
+                <attachment title='Screenshot' source='dc6023fe-2f21-424e-9a16-cd4043e238f9-attachment.png' type='image/png' size='237746'/>
+                <attachment title='Screenshot' source='25e22686-f436-4497-84ed-41ffee9e8c72-attachment.png' type='image/png' size='233701'/>
+                <attachment title='Screenshot' source='83717759-db3d-4472-857a-17b4f1356ca0-attachment.png' type='image/png' size='172014'/>
+                <attachment title='Screenshot' source='fc50cde4-9948-45a6-9425-923d107474ef-attachment.png' type='image/png' size='281754'/>
+                <attachment title='Screenshot' source='f4a3f800-1de9-437e-b33f-2034d422c387-attachment.png' type='image/png' size='318532'/>
+                <attachment title='Screenshot' source='f3c4c2c7-00d2-40ca-b665-b56148c1e83d-attachment.png' type='image/png' size='114726'/>
+                <attachment title='Execution video' source='f41a8b01-d185-4b7d-a66e-be2310f2b5df-attachment.mp4' type='video/mp4' size='116'/>
+            </attachments>
+            <failure>
+                <message>Can't call click on element with selector "//input[@class="select2-search__field"]" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "//input[@class="select2-search__field"]" because element wasn't found
+                    at implicitWait (D:\TEST YANTRA\Js script\WebDriver IO\node_modules\webdriverio\build\utils\implicitWait.js:34:19)
+                    at async Element.elementErrorHandlerCallbackFn (D:\TEST YANTRA\Js script\WebDriver IO\node_modules\webdriverio\build\middlewares.js:20:29)
+                    at async Element.wrapCommandFn (D:\TEST YANTRA\Js script\WebDriver IO\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Context.&lt;anonymous> (D:\TEST YANTRA\Js script\WebDriver IO\test\specs\AutomationPractice.js:37:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

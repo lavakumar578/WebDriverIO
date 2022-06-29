@@ -1,4 +1,5 @@
 describe('Vtiger',async ()=>{
+    credentials.forEach(({username,password})=>{
     it('launching vtiger application',async()=>{
 
     //launching the browser and passing the url
@@ -30,4 +31,5 @@ describe('Vtiger',async ()=>{
         
        await expect(errormsg).toHaveTextContaining('You must specify') 
     })
+})
 })

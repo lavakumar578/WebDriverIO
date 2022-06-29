@@ -1,78 +1,21 @@
 {
-  "ed5752f8a1e66ec4fa6e4daf2c2a9fa3" : {
+  "9a830738c9417c8802c1a3c51f7ef454" : {
     "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
+      "failed" : 0,
+      "broken" : 1,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b972f4f832a93c7c",
-      "status" : "failed",
-      "statusDetails" : "Expect window to have title containing\n                \n                Expected: \"lava\"\n                Received: \"vtiger CRM 5 - Commercial Open Source CRM\"",
+      "uid" : "e81d792f9c3f97d1",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"//input[@class=\"select2-search__field\"]\" because element wasn't found",
       "time" : {
-        "start" : 1655892692955,
-        "stop" : 1655892798427,
-        "duration" : 105472
-      }
-    } ]
-  },
-  "51ca60ecc4c7fae472ce2962e4784d0f" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "99fbebad92d809bb",
-      "status" : "passed",
-      "time" : {
-        "start" : 1655892798428,
-        "stop" : 1655892804164,
-        "duration" : 5736
-      }
-    } ]
-  },
-  "f86fbd14b9530ccb1f1f0c3536198a27" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "a64f3f62c042b6de",
-      "status" : "passed",
-      "time" : {
-        "start" : 1655893022939,
-        "stop" : 1655893079052,
-        "duration" : 56113
-      }
-    } ]
-  },
-  "9da45817c62352943b3c74c698af1b0a" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "594f4ca77fd98724",
-      "status" : "passed",
-      "time" : {
-        "start" : 1655889067722,
-        "stop" : 1655889074831,
-        "duration" : 7109
+        "start" : 1655901621061,
+        "stop" : 1655901741811,
+        "duration" : 120750
       }
     } ]
   }

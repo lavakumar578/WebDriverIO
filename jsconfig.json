@@ -11,5 +11,5 @@
         "**/*.json",
         "node_modules/@wdio/sync",
         "node_modules/@wdio/mocha-framework"
-, "test/specs/Vtiger/Organization.js", "test/specs/Vtiger/createOrganization.js"    ]
+, "test/specs/Vtiger/Organization.js", "test/specs/Vtiger/createOrganization.js", "test/specs/Assignments/AutomationPractice.js"    ]
 }

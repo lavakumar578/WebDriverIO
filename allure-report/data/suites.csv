@@ -1,5 +1,2 @@
 "Status","Name","Duration in ms","Description"
-"passed","frames.frames handling","7109",""
-"passed","Vtiger.createCampaign","56113",""
-"failed","Vtiger.launching vtiger application","105472",""
-"passed","Vtiger.login page credentials","5736",""
+"broken","Automation.practiceAutomation","120750",""

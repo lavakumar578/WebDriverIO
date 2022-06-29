@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1655962142893' stop='1655962181124'>
+    <name>Vtiger</name>
+    <title>Vtiger</title>
+    <test-cases>
+        <test-case start='1655962142953' status='passed' stop='1655962181121'>
+            <name>launching vtiger application</name>
+            <title>launching vtiger application</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='9a11eb1b-d683-4e67-b885-cc6d0d6cef4f-attachment.png' type='image/png' size='171300'/>
+                <attachment title='Screenshot' source='32fa8660-f975-49c5-99d8-acbbb504a4cb-attachment.png' type='image/png' size='171333'/>
+                <attachment title='Screenshot' source='f9dbec8d-730d-4a20-8ff3-91ce6049ca3e-attachment.png' type='image/png' size='172924'/>
+                <attachment title='Screenshot' source='bd0fcef5-2aee-4938-8dd6-5bd74f90dc74-attachment.png' type='image/png' size='172924'/>
+                <attachment title='Screenshot' source='a28fb8f2-374f-4ef2-9b6b-3bde379c44be-attachment.png' type='image/png' size='172809'/>
+                <attachment title='Screenshot' source='9dbd5d67-46b0-44d1-b0f0-65fbbd9c9809-attachment.png' type='image/png' size='87293'/>
+                <attachment title='Screenshot' source='858beda9-813b-4b61-8180-c5b2ff4f8626-attachment.png' type='image/png' size='132155'/>
+                <attachment title='Screenshot' source='f7f35602-54f8-4bed-a0c4-a98268d0615b-attachment.png' type='image/png' size='99169'/>
+                <attachment title='Screenshot' source='4899c1cf-9afd-49cb-bfbc-1e9f81181fda-attachment.png' type='image/png' size='99169'/>
+                <attachment title='Screenshot' source='92303004-1f86-45a3-8f50-1e153c31b9a2-attachment.png' type='image/png' size='99169'/>
+                <attachment title='Screenshot' source='f880047a-74f4-4ff3-a13a-c8cfa439eb82-attachment.png' type='image/png' size='99645'/>
+                <attachment title='Screenshot' source='21b5597d-9e9a-4b90-ae3c-c8971e67ee84-attachment.png' type='image/png' size='119447'/>
+                <attachment title='Screenshot' source='769f93b7-5188-43bf-a242-f5567e9e2852-attachment.png' type='image/png' size='119447'/>
+                <attachment title='Screenshot' source='feb9bf34-f58d-4f24-b556-c81c405761fc-attachment.png' type='image/png' size='171333'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

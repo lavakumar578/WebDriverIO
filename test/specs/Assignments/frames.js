@@ -11,8 +11,8 @@ describe('frames',async()=>{
         var getmsg=await $("//input")
         await msg.setValue('hello morning')
         var result=await getmsg.getValue()
-        // await assert.equal(result, 'hello morning', 'msg is not equal');
-        await assert.equal(result, 'hel', 'msg is not equal');
+        await assert.equal(result, 'hello morning', 'msg is not equal');
+        // await assert.equal(result, 'hel', 'msg is not equal');
         
         
         

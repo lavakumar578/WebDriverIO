@@ -24,13 +24,13 @@ exports.config = {
     //
     //npx wdio run ./wdio.conf.js
     specs: [
-        // './test/specs/**/*.js',
+        './test/specs/**/*.js',
         // 'test/specs/Assignments/radioButton.js',
         // 'test/specs/Assignments/VtigerContactCheckBox.js',
         // 'test/specs/Assignments/scrollHelp.js',
         // 'test/specs/Assignments/frames.js',
         // 'test/specs/Assignments/framehandling.js',
-        'test/specs/Vtiger/createCampaignTest.js',
+        // 'test/specs/Vtiger/createCampaignTest.js',
         // 'test/specs/Vtiger/createContact.js',
         // 'test/specs/Vtiger/createContactWithOrganization.js',
         // 'test/specs/Vtiger/createOrganizationWithIndustryAndType.js',
@@ -67,7 +67,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 3,
+    maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -78,10 +78,15 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 1,
+        maxInstances: 5,
         //
         // browserName: 'firefox',
         browserName: 'chrome',
+        // 'goog:chromeOptions': {
+        //     // to run chrome headless the following flags are required
+        //     // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
+        //     // args: ['--headless', '--disable-gpu'],
+        //     },
         // browserName: 'MicrosoftEdge',
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
@@ -91,8 +96,16 @@ exports.config = {
     },
     // {
     //     maxInstances: 1,
-    //     // browserName: 'firefox',
     //        browserName: 'MicrosoftEdge',
+    //     acceptInsecureCerts: true
+    // },
+    // {
+    //     maxInstances: 1,
+    //     browserName: 'firefox',
+    //     'moz:firefoxOptions': {
+    //     // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+    //     args: ['-headless']
+    //      },
     //     acceptInsecureCerts: true
     // }
 ],
@@ -121,7 +134,7 @@ exports.config = {
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail: 2,
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -143,8 +156,8 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: ['selenium-standalone'],
-    services:['chromedriver'],
+    //  services: ['selenium-standalone'],
+   services:['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -166,18 +179,29 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    // reporters: ['spec'],
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false,
-    }]],
-    reporters: [
-        [video, {
-          saveAllVideos: false,       // If true, also saves videos for successful test cases
-          videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        }],
-      ],
+    reporters: ['spec'],
+    // reporters: [['allure', {
+    //     outputDir: 'allure-results',
+    //     disableWebdriverStepsReporting: true,
+    //     disableWebdriverScreenshotsReporting: false,
+    // }]],
+    // reporters: [
+    //     [video, {
+    //       saveAllVideos: false,       // If true, also saves videos for successful test cases
+    //       videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+    //     }],
+    //   ],
+      // reporters: [
+      //   [video, {
+      //     saveAllVideos: false,       // If true, also saves videos for successful test cases
+      //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+      //   }],
+      //   ['allure', {
+      //     outputDir: './_results_/allure-raw',
+      //     disableWebdriverStepsReporting: true,
+      //     disableWebdriverScreenshotsReporting: false,
+      //   }],
+      // ],
 
 
     

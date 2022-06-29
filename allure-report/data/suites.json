@@ -2,60 +2,20 @@
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "name" : "suites",
   "children" : [ {
-    "name" : "frames",
+    "name" : "Automation",
     "children" : [ {
-      "name" : "frames handling",
-      "uid" : "594f4ca77fd98724",
-      "parentUid" : "24e3e23fe7d723bc7ce5002cdff9f9e6",
-      "status" : "passed",
+      "name" : "practiceAutomation",
+      "uid" : "e81d792f9c3f97d1",
+      "parentUid" : "e77a767ee031759f5556fee5c8de8a23",
+      "status" : "broken",
       "time" : {
-        "start" : 1655889067722,
-        "stop" : 1655889074831,
-        "duration" : 7109
+        "start" : 1655901621061,
+        "stop" : 1655901741811,
+        "duration" : 120750
       },
       "flaky" : false,
-      "parameters" : [ "chrome-103.0.5060.53" ]
+      "parameters" : [ "chrome-103.0.5060.53", "103.0.5060.53" ]
     } ],
-    "uid" : "24e3e23fe7d723bc7ce5002cdff9f9e6"
-  }, {
-    "name" : "Vtiger",
-    "children" : [ {
-      "name" : "launching vtiger application",
-      "uid" : "b972f4f832a93c7c",
-      "parentUid" : "dceb57b53861d25d6ed943dd8bd17c83",
-      "status" : "failed",
-      "time" : {
-        "start" : 1655892692955,
-        "stop" : 1655892798427,
-        "duration" : 105472
-      },
-      "flaky" : false,
-      "parameters" : [ "chrome-103.0.5060.53" ]
-    }, {
-      "name" : "login page credentials",
-      "uid" : "99fbebad92d809bb",
-      "parentUid" : "dceb57b53861d25d6ed943dd8bd17c83",
-      "status" : "passed",
-      "time" : {
-        "start" : 1655892798428,
-        "stop" : 1655892804164,
-        "duration" : 5736
-      },
-      "flaky" : false,
-      "parameters" : [ "chrome-103.0.5060.53" ]
-    }, {
-      "name" : "createCampaign",
-      "uid" : "a64f3f62c042b6de",
-      "parentUid" : "dceb57b53861d25d6ed943dd8bd17c83",
-      "status" : "passed",
-      "time" : {
-        "start" : 1655893022939,
-        "stop" : 1655893079052,
-        "duration" : 56113
-      },
-      "flaky" : true,
-      "parameters" : [ "chrome-103.0.5060.53" ]
-    } ],
-    "uid" : "dceb57b53861d25d6ed943dd8bd17c83"
+    "uid" : "e77a767ee031759f5556fee5c8de8a23"
   } ]
 }

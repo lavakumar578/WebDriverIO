@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1655962015303' stop='1655962103349'>
+    <name>Vtiger</name>
+    <title>Vtiger</title>
+    <test-cases>
+        <test-case start='1655962016832' status='broken' stop='1655962103312'>
+            <name>launching vtiger application</name>
+            <title>launching vtiger application</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='467c58e5-8bb2-43d6-ad66-85eff8bef410-attachment.png' type='image/png' size='171300'/>
+                <attachment title='Screenshot' source='8df06f36-081e-4c44-9b17-456192a8efb3-attachment.png' type='image/png' size='171333'/>
+                <attachment title='Screenshot' source='dbbc50ea-2e71-4609-929d-d5e241b947ae-attachment.png' type='image/png' size='172924'/>
+                <attachment title='Screenshot' source='0b4d9202-a1c8-4b93-9f8a-f98abb944a88-attachment.png' type='image/png' size='172924'/>
+                <attachment title='Screenshot' source='cd91a08b-314c-4c4a-ac6f-a0ed994ca688-attachment.png' type='image/png' size='172809'/>
+                <attachment title='Screenshot' source='8b466fc8-b2f4-4a48-a7f4-e6182ade7a2a-attachment.png' type='image/png' size='106231'/>
+                <attachment title='Screenshot' source='4a461b29-f032-4fe5-b448-cbb4de7744b3-attachment.png' type='image/png' size='132319'/>
+                <attachment title='Screenshot' source='f1e973ac-f268-4088-882a-a3354e3786b0-attachment.png' type='image/png' size='99169'/>
+                <attachment title='Screenshot' source='d14d0654-6e67-49c1-b9f9-951f7bf0cd3b-attachment.png' type='image/png' size='99169'/>
+                <attachment title='Screenshot' source='8e248924-d8d8-49c5-b418-bb5f34c9685a-attachment.png' type='image/png' size='99169'/>
+                <attachment title='Screenshot' source='4ec6f3b9-51a7-4602-b67e-1272598ce42f-attachment.png' type='image/png' size='99645'/>
+                <attachment title='Screenshot' source='ea58d16d-ebfa-4141-9ec1-960b3288b4d5-attachment.png' type='image/png' size='119286'/>
+                <attachment title='Screenshot' source='feae27e4-bdde-4572-b4f7-2d4a42811136-attachment.png' type='image/png' size='119286'/>
+                <attachment title='Screenshot' source='24ff1372-8912-4e28-8980-85c3e197d799-attachment.png' type='image/png' size='171333'/>
+                <attachment title='Screenshot' source='40d19e5f-424c-4eea-abd1-b097f2358051-attachment.png' type='image/png' size='171333'/>
+                <attachment title='Execution video' source='96317aa3-febc-4638-8248-2d3c71c8f1bb-attachment.mp4' type='video/mp4' size='122'/>
+            </attachments>
+            <failure>
+                <message>(intermediate value).close is not a function</message>
+                <stack-trace>TypeError: (intermediate value).close is not a function
+                    at LoginPage.close (D:\TEST YANTRA\Js script\WebDriver IO\test\pageobjects\POM\LoginPage.js:53:22)
+                    at Context.&lt;anonymous> (D:\TEST YANTRA\Js script\WebDriver IO\test\specs\Vtiger\createContact.js:37:25)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
