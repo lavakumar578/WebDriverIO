@@ -1,3 +1,4 @@
+const { assert } = require("chai");
 class CreateProductInformationPage
 {
     get textProductName(){
@@ -5,7 +6,8 @@ class CreateProductInformationPage
     }
     async productName(){
         async () => {await this.textProductName.waitForDisplayed({ timeout: 3000 });}
-        await this.textProductName.getText()
+       var res= await this.textProductName.getText()
+       await assert.include(res,"laptop","text is not present")
     }
 }
 module.exports=new CreateProductInformationPage()

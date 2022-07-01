@@ -1,3 +1,4 @@
+const { assert } = require("chai");
 const HomePage = require("../../pageobjects/Vtiger_POM/HomePage")
 const LoginPage = require("../../pageobjects/Vtiger_POM/LoginPage")
 const CreateOragnization = require("../../pageobjects/Vtiger_POM/CreateOragnization")
@@ -12,11 +13,12 @@ describe('Vtiger',async()=>{
     var randomNum=Math.round(Math.random()*1000)
     it('open vtiger application',async()=>{
 
-    await browser.maximizeWindow()
-    //launching the browser and passing the url
-    await LoginPage.open()
-    //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
-    await expect(browser).toHaveTitleContaining('vtiger CRM 5')
+   //maximize browser
+   await browser.maximizeWindow()
+   //open url
+   await LoginPage.open()
+   //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
+   await expect(browser).toHaveTitleContaining('vtiger CRM 5')
     await LoginPage.login(username,password)
     //getting the title of the page ==>  Home page
     await expect(browser).toHaveTitleContaining('Home')

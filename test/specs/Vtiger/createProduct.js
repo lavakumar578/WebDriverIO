@@ -5,11 +5,15 @@ const ProductPage = require("../../pageobjects/Vtiger_POM/ProductPage")
 const CreateProductPage = require("../../pageobjects/Vtiger_POM/CreateProductPage")
 const credentials=JSON.parse(fs.readFileSync("test/testdata/login.json"))
 describe('vtiger',async()=>{
-  credentials.forEach(({username,password})=>{
+  credentials.forEach(({username,password,product})=>{
     it('lauching vtiger application-Smoke',async()=>{
-      await LoginPage.open()
+      //maximize browser
       await browser.maximizeWindow()
-      await LoginPage.login(username,password)
+      //open url
+      await LoginPage.open()
+      //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
+      await expect(browser).toHaveTitleContaining('vtiger CRM 5')
+      await LoginPage.login(username,password,product)
     //getting the title of the page ==>  Home page
     await expect(browser).toHaveTitleContaining('Home')
     await HomePage.product()
@@ -17,7 +21,7 @@ describe('vtiger',async()=>{
      await expect(browser).toHaveTitleContaining('Products')
     await ProductPage.clickProduct()
     await expect(browser).toHaveUrlContaining('EditView&return_action')
-    await CreateProductPage.enterProductName('laptop')
+    await CreateProductPage.enterProductName(product)
     await CreateProductPage.selectCategory('Software')
     await CreateProductPage.scroll.scrollIntoView()
     await CreateProductPage.fileUpload('C:/Users/LAVA KUMAR/Pictures/Screenshots/Screenshot (1).png')

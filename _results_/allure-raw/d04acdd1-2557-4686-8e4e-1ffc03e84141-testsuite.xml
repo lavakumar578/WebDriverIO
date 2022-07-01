@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656486161394' stop='1656486190495'>
+    <name>frames</name>
+    <title>frames</title>
+    <test-cases>
+        <test-case start='1656486165872' status='failed' stop='1656486190423'>
+            <name>frames handling</name>
+            <title>frames handling</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='38968580-c615-4f45-8129-6f55fa72f9ff-attachment.png' type='image/png' size='635681'/>
+                <attachment title='Screenshot' source='d3969cf4-37b4-42b7-af7a-2d0d417a5dc8-attachment.png' type='image/png' size='917528'/>
+                <attachment title='Screenshot' source='daae4ef8-f341-4dbb-b611-6f81420f9a3e-attachment.png' type='image/png' size='917528'/>
+                <attachment title='Screenshot' source='e91395ea-8226-4d32-8ed4-bea535eaaca9-attachment.png' type='image/png' size='919391'/>
+                <attachment title='Screenshot' source='c74c26f5-951f-4450-848f-f68bf27d057a-attachment.png' type='image/png' size='919375'/>
+                <attachment title='Screenshot' source='da73f7b5-dcbb-4bd4-9e48-0c002baf413f-attachment.png' type='image/png' size='919375'/>
+                <attachment title='Execution video' source='838f9d53-b2e9-4545-ae7a-5af2c7992cd4-attachment.mp4' type='video/mp4' size='109'/>
+            </attachments>
+            <failure>
+                <message>msg is not equal: expected 'hello morning' to equal 'hel'      
+                      actual expected
+                      
+                      'hello morninghel'
+                      </message>
+                <stack-trace>AssertionError: msg is not equal: expected 'hello morning' to equal 'hel'
+                    at Context.&lt;anonymous> (D:\TEST YANTRA\Js script\WebDriver IO\test\specs\Assignments\frames.js:15:22)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

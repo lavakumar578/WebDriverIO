@@ -24,13 +24,13 @@ exports.config = {
     //
     //npx wdio run ./wdio.conf.js
     specs: [
-        './test/specs/**/*.js',
+        // './test/specs/**/*.js',
         // 'test/specs/Assignments/radioButton.js',
         // 'test/specs/Assignments/VtigerContactCheckBox.js',
         // 'test/specs/Assignments/scrollHelp.js',
         // 'test/specs/Assignments/frames.js',
         // 'test/specs/Assignments/framehandling.js',
-        // 'test/specs/Vtiger/createCampaignTest.js',
+        'test/specs/Vtiger/createCampaignTest.js',
         // 'test/specs/Vtiger/createContact.js',
         // 'test/specs/Vtiger/createContactWithOrganization.js',
         // 'test/specs/Vtiger/createOrganizationWithIndustryAndType.js',
@@ -67,7 +67,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -78,7 +78,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         // browserName: 'firefox',
         browserName: 'chrome',
@@ -140,14 +140,14 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'http://localhost:8888/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 100000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
-    connectionRetryTimeout: 1200000,
+    connectionRetryTimeout: 120000,
     //
     // Default request retries count
     connectionRetryCount: 3,
@@ -191,17 +191,17 @@ exports.config = {
     //       videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
     //     }],
     //   ],
-      // reporters: [
-      //   [video, {
-      //     saveAllVideos: false,       // If true, also saves videos for successful test cases
-      //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-      //   }],
-      //   ['allure', {
-      //     outputDir: './_results_/allure-raw',
-      //     disableWebdriverStepsReporting: true,
-      //     disableWebdriverScreenshotsReporting: false,
-      //   }],
-      // ],
+    //   reporters: [
+    //     [video, {
+    //       saveAllVideos: false,       // If true, also saves videos for successful test cases
+    //       videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+    //     }],
+    //     ['allure', {
+    //       outputDir: './_results_/allure-raw',
+    //       disableWebdriverStepsReporting: true,
+    //       disableWebdriverScreenshotsReporting: false,
+    //     }],
+    //   ],
 
 
     

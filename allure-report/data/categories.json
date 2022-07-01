@@ -2,24 +2,24 @@
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
   "children" : [ {
-    "name" : "Test defects",
+    "name" : "Product defects",
     "children" : [ {
-      "name" : "Can't call click on element with selector \"//input[@class=\"select2-search__field\"]\" because element wasn't found",
+      "name" : "Expect window to have title containing\n                \n                Expected: \"Document\"\n                Received: \"Administrator - Campaigns - vtiger CRM 5 - Commercial Open Source CRM\"",
       "children" : [ {
-        "name" : "practiceAutomation",
-        "uid" : "e81d792f9c3f97d1",
-        "parentUid" : "60f567c681f7c727f0ee634ac5530881",
-        "status" : "broken",
+        "name" : "createCampaign",
+        "uid" : "db76b46303b5a419",
+        "parentUid" : "36fba0730246e4487c6c7b45c2a6b734",
+        "status" : "failed",
         "time" : {
-          "start" : 1655901621061,
-          "stop" : 1655901741811,
-          "duration" : 120750
+          "start" : 1655887886649,
+          "stop" : 1655888007875,
+          "duration" : 121226
         },
         "flaky" : false,
-        "parameters" : [ "chrome-103.0.5060.53", "103.0.5060.53" ]
+        "parameters" : [ "chrome-103.0.5060.53" ]
       } ],
-      "uid" : "60f567c681f7c727f0ee634ac5530881"
+      "uid" : "36fba0730246e4487c6c7b45c2a6b734"
     } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]
 }

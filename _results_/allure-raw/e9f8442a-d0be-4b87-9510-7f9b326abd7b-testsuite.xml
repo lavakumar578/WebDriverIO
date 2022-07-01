@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656486254243' stop='1656486309833'>
+    <name>Vtiger</name>
+    <title>Vtiger</title>
+    <test-cases>
+        <test-case start='1656486254289' status='passed' stop='1656486309830'>
+            <name>checkBox</name>
+            <title>checkBox</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-6'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='de15310d-2acd-4961-8878-e4587f98f315-attachment.png' type='image/png' size='171333'/>
+                <attachment title='Screenshot' source='4bd04da7-2f80-4f19-9804-226f4a6a27ce-attachment.png' type='image/png' size='182029'/>
+                <attachment title='Screenshot' source='c1ad0a52-d23e-4471-89d2-99c2b221dde8-attachment.png' type='image/png' size='182059'/>
+                <attachment title='Screenshot' source='c55de518-9e97-4285-ac85-ae5766af4e55-attachment.png' type='image/png' size='183484'/>
+                <attachment title='Screenshot' source='30b26ac4-f4b9-491f-81e6-64732488ecb5-attachment.png' type='image/png' size='183491'/>
+                <attachment title='Screenshot' source='c7501a9a-e2c5-4571-b460-b75a8cf257a8-attachment.png' type='image/png' size='183491'/>
+                <attachment title='Screenshot' source='8a6c94b1-f0ed-4e7b-a2d0-4f870a22ca2b-attachment.png' type='image/png' size='108151'/>
+                <attachment title='Screenshot' source='e2f6504a-cb72-4e58-af75-0c2a0844957a-attachment.png' type='image/png' size='139189'/>
+                <attachment title='Screenshot' source='178547e3-2664-4042-8c6a-cab6839ab23f-attachment.png' type='image/png' size='139504'/>
+                <attachment title='Screenshot' source='10848057-a4fd-40fd-9a25-ab9a0234221b-attachment.png' type='image/png' size='139504'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

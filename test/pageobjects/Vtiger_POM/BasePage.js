@@ -8,6 +8,6 @@ module.exports = class BasePage {
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     open () {
-        return browser.url(`http://localhost:8888/`)
+        return browser.url(``)
     }
 }

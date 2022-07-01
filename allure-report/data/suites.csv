@@ -1,2 +1,3 @@
 "Status","Name","Duration in ms","Description"
-"broken","Automation.practiceAutomation","120750",""
+"passed","frames.frames handling","7109",""
+"failed","Vtiger.createCampaign","121226",""

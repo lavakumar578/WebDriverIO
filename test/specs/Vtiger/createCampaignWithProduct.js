@@ -1,4 +1,4 @@
-
+const { assert } = require("chai");
 const fs=require('fs')
 const HomePage = require('../../pageobjects/Vtiger_POM/HomePage')
 const LoginPage = require('../../pageobjects/Vtiger_POM/LoginPage')
@@ -10,14 +10,15 @@ const CampaignPage=require("../../pageobjects/Vtiger_POM/CampaignPage")
 const credentials=JSON.parse(fs.readFileSync("test/testdata/login.json"))
 describe('Vtiger',async()=>{
     var randomNum=Math.round(Math.random()*1000)
-    credentials.forEach(({username,password})=>{
+    credentials.forEach(({username,password,product,campaign})=>{
     it('open vtiger application',async()=>{
-    //launching the browser and passing the url
-    await LoginPage.open()
+    //maximize browser
     await browser.maximizeWindow()
+    //open url
+    await LoginPage.open()
     //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
     await expect(browser).toHaveTitleContaining('vtiger CRM 5')
-    await LoginPage.login(username,password)
+    await LoginPage.login(username,password,product,campaign)
     //getting the title of the page ==>  Home page
     await expect(browser).toHaveTitleContaining('Home')
     await HomePage.product()
@@ -25,20 +26,19 @@ describe('Vtiger',async()=>{
      await expect(browser).toHaveTitleContaining('Products')
     await ProductPage.clickProduct()
     await expect(browser).toHaveUrlContaining('EditView&return_action')
-    var productName='laptop'+randomNum
+    var productName=product+randomNum
     await CreateProductPage.enterProductName(productName)
     await CreateProductPage.selectCategory('Software')
     await CreateProductPage.scroll.scrollIntoView()
     await CreateProductPage.save()
     await expect(browser).toHaveUrlContaining('DetailView&module')
-    var getRes=await CreateproductInformationPage.productName()
-    console.log(getRes);
+    await CreateproductInformationPage.productName()
     await HomePage.campaign()
     //getting the title of the page ==>  Campaigns
      await expect(browser).toHaveTitleContaining('Campaigns')
     await CampaignPage.createCampaign()
     await expect(browser).toHaveUrlContaining('EditView&return_action')
-    await CreateCampaignPage.enterCampaignName('SDET'+randomNum)
+    await CreateCampaignPage.enterCampaignName(campaign+randomNum)
     await CreateCampaignPage.add()
     var window=await browser.getWindowHandles()
     await browser.switchToWindow(window[1])

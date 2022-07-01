@@ -13,7 +13,10 @@
         "wdio-chromedriver-service": "^7.3.2"
     },
     "scripts": {
-        "wdio": "wdio run wdio.conf.js"
+        "wdio": "wdio run wdio.conf.js",
+        "allurereport":"allue generate --clean allure results",
+        "allure":"allure open",
+        "Smoke":"npx wdio run ./wdio.conf.js --mochaOpts.grep Smoke"
     },
     "dependencies": {
         "chai": "^4.3.6",

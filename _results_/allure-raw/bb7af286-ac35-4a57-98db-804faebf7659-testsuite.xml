@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656486161376' stop='1656486184854'>
+    <name>radioButton</name>
+    <title>radioButton</title>
+    <test-cases>
+        <test-case start='1656486165864' status='passed' stop='1656486184851'>
+            <name>clickonTwo</name>
+            <title>clickonTwo</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='05b97866-081b-4250-a8a7-267124a0e55c-attachment.png' type='image/png' size='129143'/>
+                <attachment title='Screenshot' source='42a82c06-fdb8-4f32-a98f-bd1bc92ce71c-attachment.png' type='image/png' size='129885'/>
+                <attachment title='Screenshot' source='ea827c15-6344-4b12-9f7d-046cefb2a1bd-attachment.png' type='image/png' size='130200'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

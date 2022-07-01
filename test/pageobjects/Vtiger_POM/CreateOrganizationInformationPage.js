@@ -1,3 +1,5 @@
+const { assert } = require("chai");
+
 class CreateOragnizationInformationPage
 {
     get text()
@@ -6,7 +8,9 @@ class CreateOragnizationInformationPage
     }
     async organizationName(){
         async () => {await this.text.waitForDisplayed({ timeout: 3000 });}
-        await this.text.getText()
+      var res= await this.text.getText()
+        await assert.include(res,"SDET","text is not present")
+        
     }
 }
 module.exports=new CreateOragnizationInformationPage()

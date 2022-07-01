@@ -2,20 +2,36 @@
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "name" : "packages",
   "children" : [ {
-    "name" : "Automation",
+    "name" : "Vtiger",
     "children" : [ {
-      "name" : "practiceAutomation",
-      "uid" : "e81d792f9c3f97d1",
-      "parentUid" : "bc076b91f0c346e6bb6c7d350a5c8b36",
-      "status" : "broken",
+      "name" : "createCampaign",
+      "uid" : "db76b46303b5a419",
+      "parentUid" : "f9c9dacfe357924457ddb2f32292d77f",
+      "status" : "failed",
       "time" : {
-        "start" : 1655901621061,
-        "stop" : 1655901741811,
-        "duration" : 120750
+        "start" : 1655887886649,
+        "stop" : 1655888007875,
+        "duration" : 121226
       },
       "flaky" : false,
-      "parameters" : [ "chrome-103.0.5060.53", "103.0.5060.53" ]
+      "parameters" : [ "chrome-103.0.5060.53" ]
     } ],
-    "uid" : "bc076b91f0c346e6bb6c7d350a5c8b36"
+    "uid" : "f9c9dacfe357924457ddb2f32292d77f"
+  }, {
+    "name" : "frames",
+    "children" : [ {
+      "name" : "frames handling",
+      "uid" : "fbf45697ec67365d",
+      "parentUid" : "9505963bcbfbb391596ef771503d9091",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655889067722,
+        "stop" : 1655889074831,
+        "duration" : 7109
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome-103.0.5060.53" ]
+    } ],
+    "uid" : "9505963bcbfbb391596ef771503d9091"
   } ]
 }

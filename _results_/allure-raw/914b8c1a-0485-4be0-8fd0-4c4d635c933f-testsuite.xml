@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656486161391' stop='1656486208665'>
+    <name>frameshandling</name>
+    <title>frameshandling</title>
+    <test-cases>
+        <test-case start='1656486165863' status='passed' stop='1656486208662'>
+            <name>frame</name>
+            <title>frame</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3ef1ef7f-27d6-4189-9483-0b73e62ad6ef-attachment.png' type='image/png' size='48242'/>
+                <attachment title='Screenshot' source='950b8528-db68-4dbb-8871-6b5da76867a5-attachment.png' type='image/png' size='52550'/>
+                <attachment title='Screenshot' source='56f37188-56b3-4999-9114-19a4c406caec-attachment.png' type='image/png' size='52550'/>
+                <attachment title='Screenshot' source='8d66600d-3db3-4d40-ae18-a695962a81d8-attachment.png' type='image/png' size='53909'/>
+                <attachment title='Screenshot' source='c6b3678c-0744-400e-b256-e5db3cf4652a-attachment.png' type='image/png' size='55121'/>
+                <attachment title='Screenshot' source='68ad37da-7783-43b0-8cb8-bf119a10ab45-attachment.png' type='image/png' size='55121'/>
+                <attachment title='Screenshot' source='e54d7ccf-68a4-4177-bbf1-0a048094deb1-attachment.png' type='image/png' size='55104'/>
+                <attachment title='Screenshot' source='6a34d029-f3b5-4616-bc7a-8e9c16e552da-attachment.png' type='image/png' size='55442'/>
+                <attachment title='Screenshot' source='d9ac4b1d-46c2-486b-93e8-d4d1d885026b-attachment.png' type='image/png' size='57934'/>
+                <attachment title='Screenshot' source='4eb6794e-5fc0-4b18-9491-d6edbf546b26-attachment.png' type='image/png' size='49232'/>
+                <attachment title='Screenshot' source='7197d33a-61c3-484d-abe0-86160a55483b-attachment.png' type='image/png' size='50671'/>
+                <attachment title='Screenshot' source='c9db68ca-6dd8-45ec-bf86-bc50fbb773a0-attachment.png' type='image/png' size='54542'/>
+                <attachment title='Screenshot' source='bd768e20-4bf2-4fba-b512-95bbf3e20a47-attachment.png' type='image/png' size='49692'/>
+                <attachment title='Screenshot' source='42e8beb8-382c-4ec3-8bfc-006c29179cdd-attachment.png' type='image/png' size='45726'/>
+                <attachment title='Screenshot' source='af5bdcc3-8456-4756-8813-4de64eddac2b-attachment.png' type='image/png' size='44213'/>
+                <attachment title='Screenshot' source='1c2bfee6-8f52-464d-96c8-c358e6652d4e-attachment.png' type='image/png' size='47444'/>
+                <attachment title='Screenshot' source='b388590b-fc9d-4248-ad36-0bcb6bc5d7e7-attachment.png' type='image/png' size='51228'/>
+                <attachment title='Screenshot' source='88555b14-854c-4b97-8fdb-b6c6f6404b2f-attachment.png' type='image/png' size='50717'/>
+                <attachment title='Screenshot' source='9a892517-a39f-4a82-b865-69a3e7ca1680-attachment.png' type='image/png' size='47908'/>
+                <attachment title='Screenshot' source='a48d5043-1a35-4581-adaa-7eccabadff27-attachment.png' type='image/png' size='47908'/>
+                <attachment title='Screenshot' source='55bf53e8-8f9c-4994-89ed-a69f4b226268-attachment.png' type='image/png' size='48664'/>
+                <attachment title='Screenshot' source='716f097d-0070-4d8a-9d98-99e07d2c9123-attachment.png' type='image/png' size='48645'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

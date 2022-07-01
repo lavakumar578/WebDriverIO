@@ -5,13 +5,14 @@ const LoginPage = require("../../pageobjects/Vtiger_POM/LoginPage")
 const fs=require('fs')
 const credentials=JSON.parse(fs.readFileSync("test/testdata/login.json"))
 describe('Vtiger',async ()=>{
-    credentials.forEach(({username,password})=>{
+    credentials.forEach(({username,password,document})=>{
     it('launching vtiger application',async()=>{
+        //maximize browser
+        await browser.maximizeWindow()
+        //open url
         await LoginPage.open()
         //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
         await expect(browser).toHaveTitleContaining('vtiger CRM 5')
-        //maximize the browser  
-        await browser.maximizeWindow()
         await LoginPage.login(username,password)
         //getting the title of the page ==>  Home page
         await expect(browser).toHaveTitleContaining('Home')
@@ -20,7 +21,7 @@ describe('Vtiger',async ()=>{
         await expect(browser).toHaveTitleContaining('Documents')
         await DocumentPage.clickCreateDocument()
         await expect(browser).toHaveUrlContaining('EditView&return_action')
-        await CreateDocumentPage.enterTitle('document')
+        await CreateDocumentPage.enterTitle(document)
         //switchtoframe
         await browser.switchToFrame(0)
         async () => {

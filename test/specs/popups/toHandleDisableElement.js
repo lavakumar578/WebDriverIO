@@ -19,6 +19,5 @@ describe('disable',async()=>{
         console.log(lnameValue);
         // await browser.debug()
 
-
     })
 })

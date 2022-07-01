@@ -1,0 +1,63 @@
+{
+  "uid" : "db76b46303b5a419",
+  "name" : "createCampaign",
+  "fullName" : "Vtiger.createCampaign",
+  "historyId" : "f86fbd14b9530ccb1f1f0c3536198a27",
+  "time" : {
+    "start" : 1655887886649,
+    "stop" : 1655888007875,
+    "duration" : 121226
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Expect window to have title containing\n                \n                Expected: \"Document\"\n                Received: \"Administrator - Campaigns - vtiger CRM 5 - Commercial Open Source CRM\"",
+  "statusTrace" : "Error: Expect window to have title containing\n                \n                Expected: \"Document\"\n                Received: \"Administrator - Campaigns - vtiger CRM 5 - Commercial Open Source CRM\"\n                    at Context.<anonymous> (D:\\TEST YANTRA\\Js script\\WebDriver IO\\test\\specs\\Vtiger\\createCampaignTest.js:35:31)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Vtiger"
+  }, {
+    "name" : "testClass",
+    "value" : "Vtiger"
+  }, {
+    "name" : "testMethod",
+    "value" : "createCampaign"
+  }, {
+    "name" : "package",
+    "value" : "Vtiger"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-103.0.5060.53"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "db76b46303b5a419.json",
+  "parameterValues" : [ "chrome-103.0.5060.53" ]
+}

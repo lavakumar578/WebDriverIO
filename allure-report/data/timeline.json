@@ -4,17 +4,29 @@
   "children" : [ {
     "name" : "0-0",
     "children" : [ {
-      "name" : "practiceAutomation",
-      "uid" : "e81d792f9c3f97d1",
+      "name" : "frames handling",
+      "uid" : "fbf45697ec67365d",
       "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1655901621061,
-        "stop" : 1655901741811,
-        "duration" : 120750
+        "start" : 1655889067722,
+        "stop" : 1655889074831,
+        "duration" : 7109
       },
       "flaky" : false,
-      "parameters" : [ "chrome-103.0.5060.53", "103.0.5060.53" ]
+      "parameters" : [ "chrome-103.0.5060.53" ]
+    }, {
+      "name" : "createCampaign",
+      "uid" : "db76b46303b5a419",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "failed",
+      "time" : {
+        "start" : 1655887886649,
+        "stop" : 1655888007875,
+        "duration" : 121226
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome-103.0.5060.53" ]
     } ],
     "uid" : "516fe00eea05ad99e936fa729b55eff4"
   } ]

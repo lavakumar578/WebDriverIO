@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656486254239' stop='1656486261596'>
+    <name>Amazon</name>
+    <title>Amazon</title>
+    <test-cases>
+        <test-case start='1656486254262' status='passed' stop='1656486261594'>
+            <name>scrollTillHelp</name>
+            <title>scrollTillHelp</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-5'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+                <parameter kind='argument' name='browserVersion' value='103.0.5060.53'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='b3b83353-3a86-48bf-a008-b213ebb35feb-attachment.png' type='image/png' size='673308'/>
+                <attachment title='Screenshot' source='3fc16848-28ba-48f0-b300-a0cf116d8de4-attachment.png' type='image/png' size='975834'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

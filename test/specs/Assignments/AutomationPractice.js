@@ -23,19 +23,6 @@ describe('Automation',async()=>{
         var scroll=await $('//button[@id="submitbtn"]')
         await scroll.scrollIntoView()
 
-        // var lang=await $('//div[@id="msdd"]')
-        // await lang.setValue("Telugu","English","Tamil","Hindi")
-        // var select=await $('//select[@class="form-control ng-pristine ng-valid ng-touched"]')
-        // await select.selectByVisibleText('Android')
-
-
-        // var country=await $('//select[@id="countries"]')
-        // await country.selectByVisibleText('Select Country')
-        // var selectCountry=await $('//span[@class="select2 select2-container select2-container--default select2-container--below select2-container--focus"]')
-        // await selectCountry.click()
-        // var enterCountry=await $('//input[@class="select2-search__field"]')
-        // await enterCountry.click()
-        // await enterCountry.setValue('India').keys(['Enter'])
         var year=await $('//select[@id="yearbox"]')
         await year.selectByVisibleText('1997')
         var month=await $('//select[@placeholder="Month"]')

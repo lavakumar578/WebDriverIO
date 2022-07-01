@@ -1,11 +1,21 @@
 [ {
-  "uid" : "e81d792f9c3f97d1",
-  "name" : "practiceAutomation",
+  "uid" : "db76b46303b5a419",
+  "name" : "createCampaign",
   "time" : {
-    "start" : 1655901621061,
-    "stop" : 1655901741811,
-    "duration" : 120750
+    "start" : 1655887886649,
+    "stop" : 1655888007875,
+    "duration" : 121226
   },
-  "status" : "broken",
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fbf45697ec67365d",
+  "name" : "frames handling",
+  "time" : {
+    "start" : 1655889067722,
+    "stop" : 1655889074831,
+    "duration" : 7109
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]
