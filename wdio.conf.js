@@ -1,4 +1,6 @@
 const video = require('wdio-video-reporter');
+const HomePage = require("./test/pageobjects/Vtiger_POM/HomePage")
+const LoginPage = require("./test/pageobjects/Vtiger_POM/LoginPage")
 
 exports.config = {
     //
@@ -43,13 +45,13 @@ exports.config = {
     suites: {
         //npx wdio wdio.conf.js --suite smokeSuite 
         //npx wdio wdio.conf.js --suite regressionSuite
-        smokeSuite:['test/specs/Vtiger/createDocument.js','test/specs/Vtiger/createContact.js','test/specs/Vtiger/createProduct.js'],
-        regressionSuite:['test/specs/Vtiger/createContactWithOrganization.js','test/specs/Vtiger/createOrganizationWithIndustryAndType.js']
+        // smokeSuite:['test/specs/Vtiger/createDocument.js','test/specs/Vtiger/createContact.js','test/specs/Vtiger/createProduct.js'],
+        // regressionSuite:['test/specs/Vtiger/createContactWithOrganization.js','test/specs/Vtiger/createOrganizationWithIndustryAndType.js']
     },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
-        'test/specs/example.e2e.js'
+        // 'test/specs/example.e2e.js'
     ],
     //
     // ============
@@ -277,13 +279,18 @@ exports.config = {
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
      */
-    // beforeSuite: function (suite) {
+    // beforeSuite: async function (suite) {
+       
+       
     // },
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function (test, context) {
-    // },
+    beforeTest: async function (test, context) {
+        await LoginPage.open()
+        await browser.maximizeWindow()
+      await LoginPage.login("admin","root")
+    },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
@@ -307,9 +314,10 @@ exports.config = {
      * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-        if (error) {
-            await browser.takeScreenshot();
-          }
+        // if (error) {
+        //     await browser.takeScreenshot();
+        //   }
+          await HomePage.logout()
     },
 
 
