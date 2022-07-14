@@ -10,10 +10,10 @@ describe('vtiger',async()=>{
       //maximize browser
       await browser.maximizeWindow()
       //open url
-      await LoginPage.open()
-      //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
-      await expect(browser).toHaveTitleContaining('vtiger CRM 5')
-      await LoginPage.login(username,password,product)
+      // await LoginPage.open()
+      // //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
+      // await expect(browser).toHaveTitleContaining('vtiger CRM 5')
+      // await LoginPage.login(username,password,product)
     //getting the title of the page ==>  Home page
     await expect(browser).toHaveTitleContaining('Home')
     await HomePage.product()
@@ -27,7 +27,7 @@ describe('vtiger',async()=>{
     await CreateProductPage.fileUpload('C:/Users/LAVA KUMAR/Pictures/Screenshots/Screenshot (1).png')
     await CreateProductPage.save()
     await expect(browser).toHaveUrlContaining('DetailView&module')
-    await HomePage.logout()
+    // await HomePage.logout()
     //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
     await expect(browser).toHaveTitleContaining('vtiger CRM 5')
 

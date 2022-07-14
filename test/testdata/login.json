@@ -3,10 +3,9 @@
         "username":"admin",
         "password":"root",
         "product":"laptop",
-        "document":"Document",
-        "contacts":"SDET",
-        "campaign":"TYSS",
-        "organization":"SDET34"
+     "document":"Document",
+     "contacts":"SDET",
+     "campaign":"TYSS",
+     "organization":"SDET34"
     }
-    
 ]

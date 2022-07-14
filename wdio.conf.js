@@ -25,15 +25,15 @@ exports.config = {
     // will be called from there.
     //
     //npx wdio run ./wdio.conf.js
+    // specs: Array(2).fill('test/specs/Vtiger/createContact.js'),
     specs: [
-        // './test/specs/**/*.js',
+        './test/specs/**/*.js',
         // 'test/specs/Assignments/radioButton.js',
         // 'test/specs/Assignments/VtigerContactCheckBox.js',
         // 'test/specs/Assignments/scrollHelp.js',
         // 'test/specs/Assignments/frames.js',
         // 'test/specs/Assignments/framehandling.js',
-        'test/specs/Vtiger/createCampaignTest.js',
-        // 'test/specs/Vtiger/createContact.js',
+        // 'test/specs/Vtiger/createCampaignTest.js',
         // 'test/specs/Vtiger/createContactWithOrganization.js',
         // 'test/specs/Vtiger/createOrganizationWithIndustryAndType.js',
         // 'test/specs/Vtiger/createDocument.js',
@@ -152,7 +152,7 @@ exports.config = {
     connectionRetryTimeout: 120000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 1,
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
@@ -266,8 +266,11 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: async function (test, context) {
+            await LoginPage.open()
+            await browser.maximizeWindow()
+          await LoginPage.login("admin","root")
+        },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
@@ -286,11 +289,11 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    beforeTest: async function (test, context) {
-        await LoginPage.open()
-        await browser.maximizeWindow()
-      await LoginPage.login("admin","root")
-    },
+    // beforeTest: async function (test, context) {
+    //     await LoginPage.open()
+    //     await browser.maximizeWindow()
+    //   await LoginPage.login("admin","root")
+    // },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
@@ -313,12 +316,12 @@ exports.config = {
      * @param {Boolean} result.passed    true if test has passed, otherwise false
      * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-        // if (error) {
-        //     await browser.takeScreenshot();
-        //   }
-          await HomePage.logout()
-    },
+    // afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+    //     // if (error) {
+    //     //     await browser.takeScreenshot();
+    //     //   }
+    //       await HomePage.logout()
+    // },
 
 
     
@@ -343,8 +346,18 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    // after: function (result, capabilities, specs) {
-    // },
+    after:async function (result, capabilities, specs) {
+        await HomePage.logout()
+    },
+    // beforeEach:(async function (test, context){
+    //     await LoginPage.open()
+    //         await browser.maximizeWindow()
+    //       await LoginPage.login("admin","root")
+    //   }),
+    
+    //   afterEach:(async function () {
+    //    await HomePage.logout()
+    //   }),
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {Object} config wdio configuration object

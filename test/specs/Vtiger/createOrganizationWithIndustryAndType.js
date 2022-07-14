@@ -14,10 +14,10 @@ describe('Vtiger',async ()=>{
     //maximize browser
     await browser.maximizeWindow()
     //open url
-    await LoginPage.open()
-    //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
-    await expect(browser).toHaveTitleContaining('vtiger CRM 5')
-    await LoginPage.login(username,password,organization)
+    // await LoginPage.open()
+    // //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
+    // await expect(browser).toHaveTitleContaining('vtiger CRM 5')
+    // await LoginPage.login(username,password,organization)
     //getting the title of the page ==>  Home page
     await expect(browser).toHaveTitleContaining('Home')
     await HomePage.organization()
@@ -38,7 +38,7 @@ describe('Vtiger',async ()=>{
         await CreateOragnizationPage.save()
         await CreateOragnizationInformationPage.organizationName()
         await expect(browser).toHaveUrlContaining('DetailView&module')
-        await HomePage.logout()
+        // await HomePage.logout()
 
          //getting the title of the page ==>  vtiger CRM 5 - Commercial Open Source CRM
         await expect(browser).toHaveTitleContaining('vtiger CRM 5')
